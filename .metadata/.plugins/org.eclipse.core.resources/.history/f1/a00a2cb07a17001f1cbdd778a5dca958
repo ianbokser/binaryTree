@@ -1,0 +1,49 @@
+package BT;
+
+public class BTInt<T> {
+	private NodoInt raiz;
+	private class NodoInt{
+		int elem;
+		NodoInt R,L;
+		NodoInt(int value){
+			elem = value;
+		};
+	};
+	public int nodoLength() {
+		return nodoLength(this.raiz);
+	};
+	
+	private int nodoLength(NodoInt n){
+		if (n == null){
+			return 0;
+		};
+		return 1 + nodoLength(n.L) + nodoLength(n.R);
+	};
+	
+	public int height () {
+		return height(this.raiz);
+	};
+	
+	private int (NodoInt n){
+		if (n == null) {
+			return 0;
+		};
+		int h_L = height(n.L);
+		int h_R = height(n.R);
+		if (h_L > h_R) {
+			return 1 + h_L;
+		};
+		return 1 + h_R;
+	};
+	
+	public boolean include(NodeInt n, NodeInt elem){
+		if (n==null) {
+			return false;
+		};
+		if (n.elem == elem) {
+			return true;
+		};
+		return include(n.L, elem) || include(n.R, elem);
+	};
+}
+
