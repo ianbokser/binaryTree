@@ -55,11 +55,7 @@ public class BTInt<T> {
 		if (n == null) {
 			return new NodeInt(elem);
 		};
-		if (n.R == null) {
-			n.R = addNode(n.R, elem);
-		}else {
-			n.L = addNode(n.L, elem);
-		};
+		n.L = addNode(n.L, elem);
 		return n;
 	};
 }
