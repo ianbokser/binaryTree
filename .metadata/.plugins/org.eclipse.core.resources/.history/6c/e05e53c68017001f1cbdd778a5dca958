@@ -43,7 +43,7 @@ public class BTInt<T> {
 		if (n.elem == elem) {
 			return true;
 		};
-		return includes(n.L, elem) || includes(n.R, elem);
+		return includes(n.L, elem) || include(n.R, elem);
 	};
 	
 	// adding desbalancing mode

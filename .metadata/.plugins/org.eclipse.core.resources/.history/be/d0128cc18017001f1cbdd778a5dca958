@@ -36,14 +36,14 @@ public class BTInt<T> {
 		return 1 + h_R;
 	};
 	
-	public boolean includes(NodeInt n, int elem){
+	public boolean include(NodeInt n, int elem){
 		if (n==null) {
 			return false;
 		};
 		if (n.elem == elem) {
 			return true;
 		};
-		return includes(n.L, elem) || includes(n.R, elem);
+		return include(n.L, elem) || include(n.R, elem);
 	};
 	
 	// adding desbalancing mode
@@ -62,19 +62,5 @@ public class BTInt<T> {
 		};
 		return n;
 	};
-	
-	public void deleteNode(NodeInt n, int elem) {
-		//casos:
-		// 1. lo encontre:
-		//		A- es hoja
-		//		B- tiene 1 solo hijo
-		//		C- tiene 2 hijos
-		//			1_Buscamos remplazo
-		// 			2_ remplazo
-		//			3_ quitar remplazo
-		if (includes(n, elem)) {
-			
-		};
-	}
 }
 
