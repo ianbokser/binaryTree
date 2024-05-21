@@ -1,30 +1,30 @@
 package BT;
 
 public class BTInt<T> {
-	private NodeInt raiz;
-	private class NodeInt{
+	private NodoInt raiz;
+	private class NodoInt{
 		int elem;
-		NodeInt R,L;
-		NodeInt(int value){
+		NodoInt R,L;
+		NodoInt(int value){
 			elem = value;
 		};
 	};
-	public int nodeLength() {
-		return nodeLength(this.raiz);
+	public int nodoLength() {
+		return nodoLength(this.raiz);
 	};
 	
-	private int nodeLength(NodeInt n){
+	private int nodoLength(NodoInt n){
 		if (n == null){
 			return 0;
 		};
-		return 1 + nodeLength(n.L) + nodeLength(n.R);
+		return 1 + nodoLength(n.L) + nodoLength(n.R);
 	};
 	
 	public int height () {
 		return height(this.raiz);
 	};
 	
-	private int height (NodeInt n){
+	private int (NodoInt n){
 		if (n == null) {
 			return 0;
 		};

@@ -9,15 +9,15 @@ public class BTInt<T> {
 			elem = value;
 		};
 	};
-	public int nodeLength() {
-		return nodeLength(this.raiz);
+	public int nodoLength() {
+		return nodoLength(this.raiz);
 	};
 	
-	private int nodeLength(NodeInt n){
+	private int nodoLength(NodoInt n){
 		if (n == null){
 			return 0;
 		};
-		return 1 + nodeLength(n.L) + nodeLength(n.R);
+		return 1 + nodoLength(n.L) + nodoLength(n.R);
 	};
 	
 	public int height () {
