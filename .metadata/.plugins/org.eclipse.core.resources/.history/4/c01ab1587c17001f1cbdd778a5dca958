@@ -36,7 +36,7 @@ public class BTInt<T> {
 		return 1 + h_R;
 	};
 	
-	public boolean include(NodeInt n, int elem){
+	public boolean include(NodeInt n, NodeInt elem){
 		if (n==null) {
 			return false;
 		};
@@ -44,19 +44,6 @@ public class BTInt<T> {
 			return true;
 		};
 		return include(n.L, elem) || include(n.R, elem);
-	};
-	
-	// adding desbalancing mode
-	public void addNode(int elem) {
-		raiz = addNode(raiz, elem);
-	};
-	
-	public NodeInt addNode(NodeInt n, int elem) {
-		if (n == null) {
-			return new NodeInt(elem);
-		};
-		n.L = addNode(n.L, elem);
-		return n;
 	};
 }
 
